@@ -1,5 +1,6 @@
 package com.release.controller;
 
+import com.release.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.release.service.OrderService;
@@ -17,7 +18,7 @@ public class UserController {
     private OrderService orderService;
 
     @GetMapping("/order")
-    public String getUser(){
+    public User getUser(){
         return orderService.getOrder();
     }
 }

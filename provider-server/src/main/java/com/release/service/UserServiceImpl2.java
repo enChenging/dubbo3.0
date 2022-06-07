@@ -1,5 +1,6 @@
 package com.release.service;
 
+import com.release.User;
 import com.release.UserService;
 import org.apache.dubbo.config.annotation.DubboService;
 
@@ -10,7 +11,10 @@ import org.apache.dubbo.config.annotation.DubboService;
 @DubboService(version = "2.0")
 public class UserServiceImpl2 implements UserService {
 
-    public String getUser() {
-        return "com.release-provider2.0";
+    public User getUser() {
+        return new User().setAge(18)
+                .setName("李四")
+                .setPhoneNumber(18888888888L)
+                .setSex("男");
     }
 }
